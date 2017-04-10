@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="cardBackImg" destination="JUw-KT-QOG" id="5Wk-YF-CSb"/>
+                <outlet property="cardFrondImg" destination="rNU-8Z-m9w" id="T4U-9t-I7H"/>
+                <outlet property="view" destination="iN0-l3-epB" id="K0x-kw-ZHQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tuu-ph-RBn">
+                    <rect key="frame" x="20" y="20" width="335" height="210.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hG-nw-jlW">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="210.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="请上传身份证正面照片" image="IDCardFrondImg" backgroundImage="IDCardImg">
+                                <color key="titleColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cardFrondAction:" destination="-1" eventType="touchUpInside" id="GJ5-Mx-IBN"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-8Z-m9w">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="210.5"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="1hG-nw-jlW" secondAttribute="trailing" id="8TP-De-LNj"/>
+                        <constraint firstItem="rNU-8Z-m9w" firstAttribute="top" secondItem="Tuu-ph-RBn" secondAttribute="top" id="CQ1-4G-yJn"/>
+                        <constraint firstAttribute="trailing" secondItem="rNU-8Z-m9w" secondAttribute="trailing" id="JGP-Ia-EoE"/>
+                        <constraint firstItem="1hG-nw-jlW" firstAttribute="top" secondItem="Tuu-ph-RBn" secondAttribute="top" id="JMZ-WG-WiX"/>
+                        <constraint firstAttribute="bottom" secondItem="rNU-8Z-m9w" secondAttribute="bottom" id="JdF-IB-5Pr"/>
+                        <constraint firstItem="1hG-nw-jlW" firstAttribute="leading" secondItem="Tuu-ph-RBn" secondAttribute="leading" id="QYL-dZ-khv"/>
+                        <constraint firstAttribute="width" secondItem="Tuu-ph-RBn" secondAttribute="height" multiplier="35:22" id="fhs-WV-qif"/>
+                        <constraint firstAttribute="bottom" secondItem="1hG-nw-jlW" secondAttribute="bottom" id="iQx-ia-2AZ"/>
+                        <constraint firstItem="rNU-8Z-m9w" firstAttribute="leading" secondItem="Tuu-ph-RBn" secondAttribute="leading" id="vt8-ql-GbP"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V06-to-H9x">
+                    <rect key="frame" x="20" y="260.5" width="335" height="210.5"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2j-x8-ugy">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="210.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="请上传身份证背面照片" image="IDCardFrondImg" backgroundImage="IDCardImg">
+                                <color key="titleColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cardBackAction:" destination="-1" eventType="touchUpInside" id="JgR-BK-2A8"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JUw-KT-QOG">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="210.5"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="JUw-KT-QOG" secondAttribute="trailing" id="CjF-3n-khi"/>
+                        <constraint firstAttribute="bottom" secondItem="JUw-KT-QOG" secondAttribute="bottom" id="PsB-Ve-Fg3"/>
+                        <constraint firstItem="JUw-KT-QOG" firstAttribute="top" secondItem="V06-to-H9x" secondAttribute="top" id="agU-Ur-WtW"/>
+                        <constraint firstAttribute="trailing" secondItem="K2j-x8-ugy" secondAttribute="trailing" id="dQa-fx-alW"/>
+                        <constraint firstItem="K2j-x8-ugy" firstAttribute="top" secondItem="V06-to-H9x" secondAttribute="top" id="e7J-ie-w67"/>
+                        <constraint firstAttribute="bottom" secondItem="K2j-x8-ugy" secondAttribute="bottom" id="ecc-AA-cOw"/>
+                        <constraint firstItem="K2j-x8-ugy" firstAttribute="leading" secondItem="V06-to-H9x" secondAttribute="leading" id="w13-gB-tDH"/>
+                        <constraint firstItem="JUw-KT-QOG" firstAttribute="leading" secondItem="V06-to-H9x" secondAttribute="leading" id="wzE-h7-Wvl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tuu-ph-RBn" secondAttribute="trailing" constant="20" id="Btc-a1-WCa"/>
+                <constraint firstItem="V06-to-H9x" firstAttribute="height" secondItem="Tuu-ph-RBn" secondAttribute="height" id="NVQ-wE-3SW"/>
+                <constraint firstItem="Tuu-ph-RBn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="Vh9-X7-tHj"/>
+                <constraint firstItem="Tuu-ph-RBn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="dOS-Kx-phK"/>
+                <constraint firstItem="V06-to-H9x" firstAttribute="leading" secondItem="Tuu-ph-RBn" secondAttribute="leading" id="fyF-6G-Ee8"/>
+                <constraint firstItem="V06-to-H9x" firstAttribute="trailing" secondItem="Tuu-ph-RBn" secondAttribute="trailing" id="i7D-3y-Wqd"/>
+                <constraint firstItem="V06-to-H9x" firstAttribute="top" secondItem="Tuu-ph-RBn" secondAttribute="bottom" constant="30" id="jZ0-d9-kd7"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="IDCardFrondImg" width="34" height="21"/>
+        <image name="IDCardImg" width="357" height="234"/>
+    </resources>
+</document>
