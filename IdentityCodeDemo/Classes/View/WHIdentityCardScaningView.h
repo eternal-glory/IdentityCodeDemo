@@ -12,4 +12,6 @@
 
 @property (assign, nonatomic) CGRect facePathRect;
 
+@property (strong, nonatomic) NSString * titleStr;
+
 @end

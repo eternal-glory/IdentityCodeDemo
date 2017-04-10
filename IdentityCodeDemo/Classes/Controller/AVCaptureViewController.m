@@ -51,7 +51,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-        self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
+    self.navigationController.navigationBar.translucent = YES;
     
     self.navigationItem.title = @"扫描身份证";
 
@@ -68,6 +70,12 @@
     WHIdentityCardScaningView * IDCardScaningView = [[WHIdentityCardScaningView alloc] initWithFrame:self.view.frame];
     
     self.faceDetectionFrame = IDCardScaningView.facePathRect;
+    
+    if ([self.identify isEqualToString:@"Back"]) {
+        IDCardScaningView.titleStr = @"反";
+    }
+    
+    
     [self.view addSubview:IDCardScaningView];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain target:self action:@selector(turnOnOrOffTorch)];

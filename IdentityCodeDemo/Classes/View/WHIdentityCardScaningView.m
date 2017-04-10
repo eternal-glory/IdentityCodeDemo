@@ -22,6 +22,8 @@
     NSTimer * _timer;
 }
 
+@property (strong, nonatomic) UILabel * titleLabel;
+
 @end
 
 @implementation WHIdentityCardScaningView
@@ -92,7 +94,7 @@
     
     [tipLabel sizeToFit];
     tipLabel.center = center;
-    
+    self.titleLabel = tipLabel;
     [self addSubview:tipLabel];
 }
 
@@ -139,6 +141,10 @@
     CGContextAddLineToPoint(context, p2.x, p2.y);
     
     CGContextStrokePath(context);
+}
+
+- (void)setTitleStr:(NSString *)titleStr {
+    self.titleLabel.text = [NSString stringWithFormat:@"请将身份证%@面位于区域内进行扫描",titleStr];
 }
 
 
